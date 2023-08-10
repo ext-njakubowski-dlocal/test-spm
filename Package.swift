@@ -14,7 +14,7 @@ let package = Package(
             targets: ["DLMobileCheckoutSDK"])
     ],
     dependencies: [
-        .package(name: "DLDirectSDK", url: "https://github.com/dlocal/dlocal-direct-ios-sdk.git", exact: "0.2.12")
+        .package(url: "https://github.com/dlocal/dlocal-direct-ios-sdk.git", exact: "0.2.12")
     ],
     targets: [
         .binaryTarget(
