@@ -4,20 +4,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "DLDirectSDK",
+    name: "DLMobileCheckoutSDK",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "DLDirectSDK",
-            targets: ["DLDirectSDK"])
+            name: "DLMobileCheckoutSDK",
+            targets: ["DLMobileCheckoutSDK"])
+    ],
+    dependencies: [
+        .package(name: "DLDirectSDK", url: "https://github.com/dlocal/dlocal-direct-ios-sdk.git", exact: "0.2.12")
     ],
     targets: [
         .binaryTarget(
-            name: "DLDirectSDK",
-            url: "https://github.com/dlocal/dlocal-direct-ios-sdk/releases/download/v0.2.41/DLDirectSDK-0.2.41.zip",
-            checksum: "9dd9a043e2dcb0a5f32da2d5302b03a37c5ed8ef225c4381e847cfe89fbd6cad"
+            name: "DLMobileCheckoutSDK",
+            url: "https://github.com/dlocal/mobile-checkout-sdk-ios/releases/download/v0.1.16/DLMobileCheckoutSDK-0.1.16.zip",
+            checksum: "0441e4ee50a260ba63a7244da7d8e798dc9a2e6c2e8eadd12143f6782fa46714",
+            dependencies: [
+                .product(name: "DLDirectSDK", package: "DLDirectSDK")
+            ]
         )
     ]
 )
