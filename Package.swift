@@ -22,7 +22,7 @@ let package = Package(
             url: "https://github.com/dlocal/mobile-checkout-sdk-ios/releases/download/v0.1.16/DLMobileCheckoutSDK-0.1.16.zip",
             checksum: "0441e4ee50a260ba63a7244da7d8e798dc9a2e6c2e8eadd12143f6782fa46714",
             dependencies: [
-                .product(name: "DLDirectSDK", package: "DLDirectSDK")
+                .product(name: "DLDirectSDK")
             ]
         )
     ]
